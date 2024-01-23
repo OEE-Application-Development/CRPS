@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '3.83.0'
+project:
+    name: CRPS
+    package:
+        name: CRPS
+        api_version: '59.0'
+    dependencies:
+        - github: 'https://github.com/OEE-Application-Development/OEE-EDA-Base-Unlocked'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/CRPS/tests
+            options:
+                outputdir: robot/CRPS/results
+
+    robot_testdoc:
+        options:
+            path: robot/CRPS/tests
+            output: robot/CRPS/doc/CRPS_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
