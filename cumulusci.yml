@@ -3,6 +3,7 @@ project:
     name: CRPS
     package:
         name: CRPS
+        namespace: csuoee
         api_version: '59.0'
     dependencies:
         - github: 'https://github.com/OEE-Application-Development/OEE-EDA-Base-Unlocked'
